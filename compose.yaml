@@ -1,0 +1,13 @@
+services:
+  neofetch:
+    image: ubuntu:latest
+    command: "apt update && apt install -y neofetch && neofetch"
+    restart: always
+
+  vim:
+    image: ubuntu:latest
+    command: "apt update && apt install -y vim && vim"
+    volumes:
+      - ./cloned_repo:/app
+    working_dir: /app
+
